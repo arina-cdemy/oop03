@@ -1,8 +1,8 @@
 enum MeasurementSystem { mm, cm, dm, m, inch, feet }
 
 class Triangle {
-  final double _heightInMm;
-  final double _widthInMm;
+  double _heightInMm;
+  double _widthInMm;
   final MeasurementSystem _unitOfMeasurement;
 
   Triangle(this._heightInMm, this._widthInMm)
@@ -82,6 +82,69 @@ class Triangle {
   double get widthInFeet {
     return _widthInMm / 304.8;
   }
+
+  //---
+  set heightInCm(double height){
+    if(height > 0){
+      _heightInMm = height * 10; 
+    }
+  }
+
+    set heightInDm(double height){
+    if(height > 0){
+      _heightInMm = height * 100; 
+    }
+  }
+
+    set heightInM(double height){
+    if(height > 0){
+      _heightInMm = height * 1000; 
+    }
+  }
+
+    set heightInInch(double height){
+    if(height > 0){
+      _heightInMm = height * 25.4; 
+    }
+  }
+
+    set heightInFeet(double height){
+    if(height > 0){
+      _heightInMm = height * 304.8; 
+    }
+  }
+  //---
+
+    set widthInCm(double width){
+    if(width > 0){
+      _widthInMm = width * 10; 
+    }
+  }
+
+    set widthInDm(double width){
+    if(width > 0){
+      _widthInMm = width * 100; 
+    }
+  }
+
+    set widthInM(double width){
+    if(width > 0){
+      _widthInMm = width * 1000; 
+    }
+  }
+
+    set widthInInch(double width){
+    if(width > 0){
+      _widthInMm = width * 25.4; 
+    }
+  }
+
+    set widthInFeet(double width){
+    if(width > 0){
+      _widthInMm = width * 304.8; 
+    }
+  }
+  
 
   void printTriangle() {
     print("Width:$_widthInMm mm\nHeight:$_heightInMm mm");
